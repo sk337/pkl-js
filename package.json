@@ -16,10 +16,11 @@
   "keywords": [
     "Pkl",
     "Parser",
-    "for",
-    "Javascript",
-    "and",
-    "Typescript"
+    "ts",
+    "js",
+    "javascript",
+    "typescript",
+    "config"
   ],
   "author": "sk337",
   "license": "WTFPL",

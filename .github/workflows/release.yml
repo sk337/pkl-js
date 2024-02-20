@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: Bump version
-        run: npx version patch
+        run: npm version patch
 
       - name: Push back to repo
         uses: actions-go/push@v1
