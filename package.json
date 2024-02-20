@@ -1,0 +1,35 @@
+{
+  "name": "@sk337/pkl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "tsup",
+    "prepublish": "tsup",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk337/pkl-js.git"
+  },
+  "keywords": [
+    "Pkl",
+    "Parser",
+    "for",
+    "Javascript",
+    "and",
+    "Typescript"
+  ],
+  "author": "sk337",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/sk337/pkl-js/issues"
+  },
+  "homepage": "https://github.com/sk337/pkl-js#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}

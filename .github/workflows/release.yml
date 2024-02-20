@@ -1,0 +1,35 @@
+name: release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Bump version
+        run: npx version patch
+
+      - name: Push back to repo
+        uses: actions-go/push@v1
+        with:
+          commit-message: "Bump version"
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish to Npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
