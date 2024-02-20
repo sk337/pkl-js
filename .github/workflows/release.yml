@@ -18,14 +18,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Bump version
-        run: npm version patch
-
-      - name: Push back to repo
-        uses: actions-go/push@v1
-        with:
-          commit-message: "Bump version"
-
       - name: Build
         run: npm run build
 
